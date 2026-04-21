@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Extension ManifestVersion="7" Version="1.0.0" ExtensionBundleId="com.example.silencecutter" ExtensionBundleVersion="1.0.0" ExtensionBundleName="Silence Cutter" xmlns="http://ns.adobe.com/air/extension/manifest/v7">
+    <ExtensionPoint Id="PPROPanel">
+        <Menu>
+            <MenuItem Id="SilenceCutterMenu" Label="Silence Cutter" Enabled="true" Menu=""/>
+        </Menu>
+        <Geometry>
+            <Size>
+                <Height>300</Height>
+                <Width>400</Width>
+            </Size>
+        </Geometry>
+        <Locale>
+            <String Id="en_US" Name="Silence Cutter"/>
+        </Locale>
+    </ExtensionPoint>
+    <ExecutionEnvironment>
+        <HostList>
+            <Host Name="PPRO" Version="13.0"/>
+        </HostList>
+        <LocaleList>
+            <Locale Code="en_US"/>
+        </LocaleList>
+        <RequiredRuntimeList>
+            <RequiredRuntime Name="CSXS" Version="9.0"/>
+        </RequiredRuntimeList>
+    </ExecutionEnvironment>
+    <DispatchInfoList>
+        <DispatchInfo Id="SilenceCutterUI" Priority="1" Extensions="html,js,css">
+            <Plugins>
+                <Plugin Type="HTML" Path="index.html" Weight="1.0"/>
+            </Plugins>
+            <LocaleList>
+                <Locale Code="en_US"/>
+            </LocaleList>
+            <RequestRuntime Access="all" Name="Node" Version="8.0.0"/>
+        </DispatchInfo>
+    </DispatchInfo>
+    <Resources>
+        <MainPath>./index.html</MainPath>
+        <ScriptPath>./js/
+        </ScriptPath>
+        <ResourcePath>./resources/
+        </ResourcePath>
+        <LocalePath>./locale/
+        </LocalePath>
+    </Resources>
+    <Data>
+        <KeyValuePairs>
+            <Key Name="DeveloperName" Value="Your Name"/>
+            <Key Name="DeveloperURL" Value="http://www.example.com"/>
+        </KeyValuePairs>
+    </Data>
+</Extension>
